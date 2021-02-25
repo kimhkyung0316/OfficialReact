@@ -1,0 +1,56 @@
+.headerBar {
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.headerContainer {
+    height: 100%;
+    padding: 0 0 0 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.Link {
+    text-decoration: none;
+}
+
+.titleContainer {
+    height: auto;
+    align-self: center;
+}
+
+.title {
+    top: 0;
+    bottom: 0;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.title:hover {
+    color: #FF1493;
+}
+
+.menuOpenButtonContainer {
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background-color: black;
+}
+
+.menuOpenButton {
+    object-fit: fill;
+    cursor: pointer;
+}
