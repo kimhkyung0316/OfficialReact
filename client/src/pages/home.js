@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 
-import { Header, Menu } from '../components'
+import { Layout, QueryResult } from '../components'
 
 const EVENTS = gql`
 query getEvents {
@@ -26,10 +26,7 @@ const Home = () => {
 const { loading, error, data } = useQuery(EVENTS);
 
     return (
-        <>
-            <Header></Header>
-            <Menu></Menu>
-        </>
+        <Layout></Layout>
     );
 };
 
