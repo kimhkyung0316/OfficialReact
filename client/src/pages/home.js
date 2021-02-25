@@ -3,9 +3,9 @@ import { useQuery, gql } from '@apollo/client';
 
 import { Header, Menu } from '../components'
 
-const CARDS = gql`
-query getCards {
-    cards {
+const EVENTS = gql`
+query getEvents {
+    events {
         id
         type
         title
@@ -23,6 +23,8 @@ query getCards {
 }`;
 
 const Home = () => {
+const { loading, error, data } = useQuery(EVENTS);
+
     return (
         <>
             <Header></Header>
