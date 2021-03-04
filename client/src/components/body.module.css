@@ -1,0 +1,12 @@
+.body {
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #dcdcdc;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
