@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Children } from 'react';
 
 const QueryResult = ({ loading, error, data, children }) => {
     if (error) {
@@ -11,6 +11,7 @@ const QueryResult = ({ loading, error, data, children }) => {
         return <p>Nothing to show ...</p>;
     }
     if (data) {
+        console.log(data);
         return children;
     }
 };

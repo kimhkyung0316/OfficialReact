@@ -1,17 +1,17 @@
 import React from 'react';
 
 import cn from 'classnames';
-import css from './layout.module.css';
-import { Header, Menu } from '../components';
+import { Header, Menu, Body } from '../components';
 
 const Layout = ({children}) => {
+
     return (
         <>
             <Header></Header>
             <Menu></Menu>
-            <div className={cn(css.pageBody)}>
+            <Body>
                 {children}
-            </div>
+            </Body>
         </>
     );
 }

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { useQuery, gql } from '@apollo/client';
 
 import { Layout, QueryResult, EventCard } from '../components'
-import { eventNames } from 'process';
 
-const EVENTS = gql`
-query getEvents {
+const GET_EVENTS = gql`
+query GetEvents {
     events {
         id
         type
@@ -15,24 +14,24 @@ query getEvents {
         source
         good
         bad
-        comments {
-        id
-        author
-        commentBody
-        }
     }
 }`;
 
 const Home = () => {
-const { loading, error, data } = useQuery(EVENTS);
+    const { loading, error, data } = useQuery(GET_EVENTS);
+    console.log(data);
+    const Components = data?.events.map((event) => (
+        <EventCard key={event.id} event={event}/>
+    ))
+    console.log(Components)
 
     return (
         <Layout>
             <QueryResult loading={loading} error={error} data={data}>
-                {data?.evnents?.map((events) => (
-                    <EventCard key={events.id}></EventCard>
-                ))} 
-            </QueryResult>
+                {data?.events?.map((event) => (
+                    <EventCard key={event.id} event={event}/>
+                ))}
+            </QueryResult>               
         </Layout>
     );
 };
