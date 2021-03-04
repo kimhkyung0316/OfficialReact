@@ -1,6 +1,5 @@
 import React from 'react';
 
-import cn from 'classnames';
 import { Header, Menu, Body } from '../components';
 
 const Layout = ({children}) => {

@@ -19,11 +19,6 @@ query GetEvents {
 
 const Home = () => {
     const { loading, error, data } = useQuery(GET_EVENTS);
-    console.log(data);
-    const Components = data?.events.map((event) => (
-        <EventCard key={event.id} event={event}/>
-    ))
-    console.log(Components)
 
     return (
         <Layout>
