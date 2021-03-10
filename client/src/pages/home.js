@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { useQuery, gql } from '@apollo/client';
 
 import { Layout, QueryResult, EventCard } from '../components'
+import './normalize.css'
 
 const GET_EVENTS = gql`
 query GetEvents {
