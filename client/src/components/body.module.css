@@ -1,12 +1,18 @@
 .body {
-    height: 100vh;
-    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+    padding-top: 120px;
     display: flex;
     flex-direction: column;
     background-color: #e7e7e7;
-    position: fixed;
-    top: 100px;
+    position: relative;
     left: 0;
-    right: 0;
+    top: 0;
     z-index: -1;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
